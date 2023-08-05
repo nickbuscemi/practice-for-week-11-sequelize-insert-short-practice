@@ -10,6 +10,16 @@ const build = async () => {
     // breed: Brittany Spaniel
     // microchipped: false
     // Your code here
+    const trudy = Puppy.build({
+      name: "Trudy",
+      ageYrs: 2,
+      weightLbs: 38,
+      breed: "Brittany Spaniel",
+      microchipped: false
+    });
+  
+    await trudy.save();
+    console.log("Trudy was saved to the database!");
 
 
   } catch (err) {
@@ -30,6 +40,14 @@ const create = async () => {
     // breed: Bulldog
     // microchipped: true
     // Your code here
+    const beans = await Puppy.create({
+      name: "Beans",
+      ageYrs: 1.6,
+      weightLbs: 42,
+      breed: "Bulldog",
+      microchipped: true
+    });
+    console.log("Beans was added to the database!");
 
 
   } catch (err) {
